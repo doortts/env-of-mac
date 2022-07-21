@@ -1,3 +1,5 @@
+syntax on
+
 set laststatus=2
 set t_Co=256
 hi Comment  guifg=#80a0ff ctermfg=darkgray
@@ -13,3 +15,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 set smartcase
 set paste
+
+" Disable beep and flash with an autocmd
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
