@@ -5,3 +5,6 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 nnoremap 0 ^
 vnoremap 0 ^
+
+set visualbell
+set noerrorbells
