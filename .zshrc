@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 alias ga='git add'
 alias gb="git for-each-ref --sort=-committerdate refs/heads/ --format='%(color:yellow)%(HEAD)%(color:reset) %(refname:short) |%(color:red)%(objectname:short)%(color:reset) - %(contents:subject) (%(color:green)%(committerdate:relative)%(color:reset))%(color:blue) <%(authorname)>%(color:reset)' --color=always | column -ts'|'"
 alias god='cd /Users/doortts/Dropbox'
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs="git status"
 alias gc="git commit"
 alias gca="git commit --amend"
@@ -131,9 +131,6 @@ alias d='docker'
 alias ds='docker ps'
 
 alias ll='ls -lha'
-alias jl='jira list'
-alias js='jira show'
-alias jo='jira open'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -176,7 +173,7 @@ compdef __start_kubectl k
 
 # alias
 alias sl='subl'
-alias ft='flutter'
+alias f='flutter'
 
 # gh cli
 export GH_HOST=es.naverlabs.com
@@ -185,9 +182,11 @@ export GH_PAGER='diff-highlight | less -X -F'
 
 # flutter
 export PATH="/Users/doortts/Library/Android/sdk/tools/bin:/Users/doortts/repos/flutter/bin:$PATH"
+export PATH="$PATH":"$HOME/repos/flutter/.pub-cache/bin"
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
 
 # Go private
 export GOPRIVATE=es.naverlabs.com
@@ -205,9 +204,16 @@ fi
 # Flutter Pub install
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
-# GO 
-export GOPATH="${HOME}/go"
-export PATH="$PATH":"$GOPATH/bin"
+# npm global bin
+export PATH="$PATH":"$HOME/.npm/bin"
 
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+#gh
+alias gv='gh issue view --web'
+export PATH="/opt/homebrew/opt/mariadb@10.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/mariadb@10.3/bin:$PATH"
 
+#minikube
+export PATH="/opt/homebrew/Cellar/minikube/1.28.0/bin":$PATH
