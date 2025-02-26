@@ -36,6 +36,11 @@
 
 	설정 -> 일반 -> 공유 -> 로컬 호스트 이름
 
+## 모든 디스플레이에서 App Switcher 보이기
+```
+defaults write com.apple.Dock appswitcher-all-displays -bool true; killall Dock
+```
+
 # 2.자주 쓰는 도구들 설치
 
 ## appstore 에서 기존 구매 앱들 설치
