@@ -156,6 +156,9 @@ https://obsidian.md/
 finder에서 현재 폴더로 터미널 띄우기 
 http://zipzapmac.com/go2shell
 
+## Sensible side buttons
+https://sensible-side-buttons.archagon.net
+맥에서 마우스 추가 사이드 버튼이 상황에 맞게 잘 동작하도록 만들어주는 앱
 
 # for Commandline Shell
 
