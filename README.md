@@ -111,6 +111,8 @@ https://github.com/dteoh/SlowQuitApps
 
 https://pilotmoon.com/scrollreverser/
 
+**BTT(Better Touch Tools)를 설치하면 설정에 이미 있음. 단순히 마우스만 스크롤을 변경하기 위해서 추가 다른 앱을 설치할 필요가 없음.**
+
 ## Alfred 
 App Launcher
 
