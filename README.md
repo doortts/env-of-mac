@@ -41,6 +41,11 @@
 defaults write com.apple.Dock appswitcher-all-displays -bool true; killall Dock
 ```
 
+## 배터리 % 보이게 하기
+```
+System Settings > Control Center, then scroll down to Battery and turn on "Show Percentage". 
+```
+
 # 2.자주 쓰는 도구들 설치
 
 ## appstore 에서 기존 구매 앱들 설치
