@@ -1,0 +1,49 @@
+[alias]
+    co = checkout
+    sw = switch
+    re = restore
+    cp = cherry-pick
+    edit = "!f() { git diff --name-status --diff-filter=U | cut -f2 ; }; vi `f`"
+    add-unmerged = "!f() { git diff --name-status --diff-filter=U | cut -f2 ; }; git add `f`"
+    sf = show --pretty="format:" --name-only
+    pu = "!f(){ git branch --show-current;}; git push --set-upstream origin `f`"
+[pager]
+    log = diff-highlight | less -X -F
+    show = diff-highlight | less -X -F
+    diff = diff-highlight | less -X -F
+    tag = less -X -F
+[delta]
+    navigate = true
+    line-numbers = true
+    syntax-theme = none
+[merge]
+    conflictStyle = zdiff3
+#    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[interactive]
+    diffFilter = delta --color-only
+[push]
+    default = simple
+[core]
+    editor = /usr/bin/vim
+    excludesfile = /Users/doortts/.gitignore_global
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
+[pull]
+    rebase = true
+[grep]
+    lineNumber = false
+[rebase]
+    autostash = true
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+[tags]
+	branch = false
+[init]
+	defaultBranch = main

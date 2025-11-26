@@ -1,0 +1,56 @@
+// ~/.config/karabiner/assets/complex_modifications/escape_to_en.json 에 파일 위치시킴
+// Complex modifications 에서 위 규칙 추가
+// bundle_identifiers 는 Karabiner-EventViewer 를 이용해서 찾는다
+// 
+// See: https://github.com/johngrib/simple_vim_guide/blob/master/md/with_korean.md
+{
+  "title": "Convert to en when ESC",
+  "rules": [
+    {
+      "description":"Convert to en when ESC",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "select_input_source": {
+                "language": "en"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "^co\\.zeit\\.hyperterm$",
+                "^co\\.zeit\\.hyper$",
+                "^io\\.alacritty$",
+                "^com\\.jetbrains\\.*",
+                "^com\\.jetbrains\\.goland$",
+                "^com\\.jetbrains\\.intellij$",
+                "^com\\.jetbrains\\.webstorm$",
+                "^com\\.apple\\.dt\\.Xcode$",
+                "^com\\.google\\.android\\.studio"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
